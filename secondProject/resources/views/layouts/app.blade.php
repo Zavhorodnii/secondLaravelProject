@@ -17,6 +17,7 @@
     @endif
 
     <div class="container mt-5">
+        @include('include.messages')
         <div class="row">
             <div class="col-8">
                 @yield('content')
