@@ -20,4 +20,12 @@ class ContactController extends Controller {
         return redirect()->route('home')->with('success', 'Message send');
     }
 
+    public function allData(){
+        return view('messages', ['data' => ContactModel::all()]);
+    }
+
+    public function showOneMessage($id){
+        return view('one-message', ['data' => ContactModel::find($id)]);
+    }
+
 }
