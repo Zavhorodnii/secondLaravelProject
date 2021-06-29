@@ -24,4 +24,8 @@ class ContactController extends Controller {
         return view('messages', ['data' => ContactModel::all()]);
     }
 
+    public function showOneMessage($id){
+        return view('one-message', ['data' => ContactModel::find($id)]);
+    }
+
 }
