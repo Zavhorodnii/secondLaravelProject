@@ -20,4 +20,8 @@ class ContactController extends Controller {
         return redirect()->route('home')->with('success', 'Message send');
     }
 
+    public function allData(){
+        return view('messages', ['data' => ContactModel::all()]);
+    }
+
 }
