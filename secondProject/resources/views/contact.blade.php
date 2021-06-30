@@ -17,7 +17,7 @@
         </div>
 
         <div class="form-group">
-            <label for="email">Enter your name</label>
+            <label for="email">Enter your email</label>
             <input type="email" name="email" placeholder="Enter your email" id="email" class="form-control">
         </div>
 
@@ -27,7 +27,7 @@
         </div>
 
         <div class="form-group">
-            <label for="message">Enter your name</label>
+            <label for="message">Enter your message</label>
             <textarea name="message" id="message" class="form-control" placeholder="message"></textarea>
         </div>
 
