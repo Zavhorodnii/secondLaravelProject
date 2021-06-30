@@ -1,17 +1,20 @@
 @extends('layouts.app')
 
 @section('title')
-    $data->subject
+    {{$data->subject}}
 @endsection
 
 @section('content')
-    <h1>$data->subject</h1>
+    <h1>{{$data->subject}}</h1>
     <div class="alert alert-info">
-        <h3>{{ $el->subject }}</h3>
-        <p>{{ $el->email }}</p>
-        <p><small>{{ $el->created_at }}</small></p>
-        <a href="{{ route('contact-data-one', $el->id) }}">
-            <button class="btn btn-warning">Detail</button>
+        <p>{{$data->message}}</p>
+        <p>{{ $data->email }} - {{ $data->name }}</p>
+        <p><small>{{ $data->created_at }}</small></p>
+        <a href="{{ route('contact-update', $data->id) }}">
+            <button class="btn btn-primary">Edit</button>
+        </a>
+        <a href="{{ route('contact-delete', $data->id) }}">
+            <button class="btn btn-danger">Delete</button>
         </a>
     </div>
 @endsection
